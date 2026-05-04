@@ -13,6 +13,9 @@ app.get('/api/data',(req,res)=>{
     };
     res.json(data);
 });
+app.get('/api/health',(req,res)=>{
+    res.status(200).json({message:'Server is healthy'});
+});
 
 app.get('/api/user/:id',(req,res)=>{
     const userId=req.params.id;
