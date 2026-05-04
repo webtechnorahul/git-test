@@ -3,7 +3,10 @@ import './App.css'
 
 const App = () => {
   return (
-    <div className='ak'>Ak bar dila de</div>
+    <div className='ak'>
+      <p>Ak bar dila de</p>
+      <p>Dobara nahi manugunga</p>
+    </div>
   )
 }
 
