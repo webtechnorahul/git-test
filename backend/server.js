@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { urlencoded } from 'express';
 
 const app=express();
 
@@ -26,6 +26,8 @@ app.get('/api/user/:id',(req,res)=>{
     };
     res.json(user);
 }); 
+
+app.use(urlencoded({extended:true}));
 
 app.listen(3000,()=>{
     console.log('Server is running on port 3000');
