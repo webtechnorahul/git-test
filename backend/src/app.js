@@ -1,5 +1,4 @@
 import express from 'express';
-
 const app=express();
 
 app.get('/',(req,res)=>{
@@ -17,18 +16,4 @@ app.get('/api/health',(req,res)=>{
     res.status(200).json({message:'Server is healthy'});
 });
 
-app.get('/api/user/:id',(req,res)=>{
-    const userId=req.params.id;
-    const user={
-        id:userId,
-        name:'User '+userId,
-        email:'rahxerls.gmail.com'
-    };
-    res.json(user);
-}); 
-
-app.use(urlencoded({extended:true}));
-
-app.listen(3000,()=>{
-    console.log('Server is running on port 3000');
-})
+export default app;
